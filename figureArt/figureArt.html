@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Figuras</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Control de pagina entre diferentes paneles de la calculadora -->
+        <div class="row-cols-4 mt-1 text-center ">
+            <div class="btn-group ">
+                <button onclick="javascript:showCalculator('calculadora-cuadrado')" type="button" class="btn btn-light">
+                    <i class="bi bi-square"></i></button>
+                <button onclick="javascript:showCalculator('calculadora-circulo')" type="button" class="btn btn-light">
+                    <i class="bi bi-circle"></i></button>
+                <button onclick="javascript:showCalculator('calculadora-triangulo')" type="button"
+                    class="btn btn-light"> <i class="bi bi-triangle"></i></button>
+            </div>
+        </div>
+        <!-- Panel de cuadrado -->
+        <div class="row-cols mt-1">
+            <section class="col shadow p-3 mb-5  bg-body rounded" id="calculadora-cuadrado">
+                <h1 class="text-center">Calculadora de cuadrado</h1>
+                <div class="text-center h1"> <i class="bi bi-square"></i> </div>
+                <form>
+                    <!-- Input -->
+                    <div class="from-group">
+                        <label for="ladoCuadrado">Introduce un lado del cuadrado:</label>
+                        <input required id="ladoCuadrado" class="form-control" type="number"
+                            placeholder="Lado del cuadrado en cm">
+                    </div>
+                    <!-- Buttons -->
+                    <div class="row justify-content-center">
+                        <button type="button" onclick="areaCuadrado()" class="btn btn-warning m-1 col">
+                            <i class="bi bi-textarea-resize"></i>
+
+                            Calcular Area</button>
+                        <button type="button" onclick="perimetroCuadrado()" class="btn btn-warning m-1 col">
+                            <i class="bi bi-textarea"></i>
+
+                            Calcular Perimetro</button>
+                    </div>
+                </form>
+                <!-- Output's -->
+                <div class="row  ">
+                    <input id="area-cuadrado" class="form-control mx-1 col" placeholder="Area del cuadrado" readonly>
+                    <input id="perimetro-cuadrado" class="form-control  mx-1 col" placeholder="Perimetro del cuadrado"
+                        readonly>
+                </div>
+            </section>
+
+            <!-- Panel de Circulo -->
+            <section hidden class="col shadow p-3 mb-5  bg-body rounded" id="calculadora-circulo">
+                <h1 class="text-center">Calculadora de circulo</h1>
+                <div class="text-center h1"> <i class="bi bi-circle"></i>
+                </div>
+                <form>
+                    <!-- Input -->
+                    <div class="from-group">
+                        <label for="radioCirculo">Radio:</label>
+                        <input required id="radio" class="form-control" type="number" placeholder="Radio del circulo en cm">
+                    </div>
+                    <!-- Button -->
+                    <div class="row justify-content-center">
+                        <button  type="button" onclick="areaCirculo()" class="btn btn-warning m-1 col">
+                            <i class="bi bi-textarea-resize"></i>
+
+                            Calcular Area</button>
+                        <button type="button" onclick="perimetroCirculo()" class="btn btn-warning m-1 col">
+                            <i class="bi bi-textarea"></i>
+
+                            Calcular Perimetro</button>
+                    </div>
+                </form>
+                <!-- Output -->
+                <div class="row  ">
+                    <input id="area-circulo" class="form-control mx-1 col" placeholder="Area del circulo" readonly>
+                    <input id="perimetro-circulo" class="form-control  mx-1 col" placeholder="Perimetro del circulo"
+                        readonly>
+                </div>
+            </section>
+
+            <!-- Panel de Triangulo -->
+            <section hidden class="col shadow p-3 mb-5  bg-body rounded" id="calculadora-triangulo">
+                <h1 class="text-center">Calculadora de triangulo</h1>
+                <div class="text-center h1"> <i class="bi bi-triangle"></i>
+                </div>
+                <form>
+                    <!-- Input's -->
+                    <div class="row">
+                        <div class="from-group col">
+                            <label  for="ladoA">Lado A:</label>
+                            <input  required id="ladoA" class="form-control" type="number" placeholder="Lado A  en cm">
+                        </div>
+                        <div class="from-group col">
+                            <label for="ladoB">Lado B:</label>
+                            <input required id="ladoB" class="form-control" type="number" placeholder="Lado B  en cm">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="from-group col ">
+                            <label for="Base:">Base: </label>
+                            <input required id="base" class="form-control" type="number" placeholder="Base en cm">
+                        </div>
+                        <div class="from-group col ">
+                            <label for="altura">Altura: </label>
+                            <input required id="altura" class="form-control" type="number" placeholder="Altura en cm">
+                        </div>
+                    </div>
+                    <!-- Buttons -->
+                    <div class="row justify-content-center">
+                        <button type="button" onclick="areaTriangulo()" class="btn btn-warning m-1 col">
+                            <i class="bi bi-textarea-resize"></i>
+
+                            Calcular Area</button>
+                        <button type="button" onclick="perimetroTriangulo()" class="btn btn-warning m-1 col">
+                            <i class="bi bi-textarea"></i>
+
+                            Calcular Perimetro</button>
+                    </div>
+                </form>
+                <!-- Outputs -->
+                <div class="row  ">
+                    <input id="area-triangulo" class="form-control mx-1 col" placeholder="Area del triangulo" readonly>
+                    <input id="perimetro-triangulo" class="form-control  mx-1 col" placeholder="Perimetro del triangulo"
+                        readonly>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+<script src="static/js/interaction.js"></script>
+<script src="static/js/figure.js"></script>
+<script src="static/js/frontend.js"></script>
+
+</html>

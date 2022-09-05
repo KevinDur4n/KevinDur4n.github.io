@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media, Mediana y Moda</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>Mediana</h1>
+        </div>
+        <form>
+            <div class="form-group">
+                <div class="form-floating"></div>
+                <textarea class="form-control" placeholder="Lista de valores : 600,500,66..." id="listaMediana"></textarea>
+                <label for="listaMediana"></label>
+            </div>
+            <div class="row justify-content-between">
+                <div class="form-group">
+                    <span>Resultado: </span><span id="resultadoMediana"></span>
+                </div>
+                <button class="btn btn-outline-danger" type="button" onclick="calculateMediana()">Calcular</button>
+            </div>
+        </form>
+        <div class="row">
+            <h1>Media</h1>
+            <form>
+                <div class="form-group">
+                    <textarea class="form-control" placeholder="Lista de valores : 600,500,66..." id="listaNumerosMedia"></textarea>
+                </div>
+            </form>
+            <div class="row justify-content-evenly">
+                <div class="form-group">
+                    <span>Resultado: </span><span id="resultadoMedia"></span>
+                </div>
+                <button class="btn btn-outline-danger" type="button" onclick="calculateMedia()">Calcular</button>
+            </div>
+        </div>
+        <div class="row">
+            <h1>Moda</h1>
+            <form>
+                <div class="form-group">
+                    <textarea class="form-control" placeholder="Lista de valores : 600,500,66..." id="listaNumerosModa"></textarea>
+                </div>
+            </form>
+            <div class="row justify-content-evenly">
+                <div class="form-group">
+                    <span>Resultado: </span><span id="resultadoModa"></span>
+                </div>
+                <button class="btn btn-outline-danger" type="button" onclick="calculateModa()">Calcular</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+
+<script src="index.js"></script>
+
+
+</html>

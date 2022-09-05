@@ -1,0 +1,20 @@
+*{
+    color: white;
+}
+body {
+    background: linear-gradient( rgba(2, 0, 36, 1) 0%, rgba(27, 44, 145, 1) 39%, rgba(0, 194, 255, 1) 100%);
+    background-repeat: no-repeat;
+    background-size: 600% 600%;
+    color: white;
+}
+nav a {
+    color: white!important;
+}
+nav .dropdown-menu {
+    background: transparent!important;
+}
+
+section.container {
+    border-radius: 10px;
+    border-style: inset;
+}

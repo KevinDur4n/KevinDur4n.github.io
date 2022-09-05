@@ -1,0 +1,56 @@
+* {
+    font-family: 'Anton', sans-serif;
+
+
+}
+
+body {
+    background: linear-gradient(105deg, #ffab00, #e67d28, #ffef00);
+    background-size: 600% 600%;
+
+    -webkit-animation: background-animate 9s ease infinite;
+    -moz-animation: background-animate 9s ease infinite;
+    animation: background-animate 9s ease infinite;
+}
+
+@-webkit-keyframes background-animate {
+    0% {
+        background-position: 0% 58%
+    }
+
+    50% {
+        background-position: 100% 43%
+    }
+
+    100% {
+        background-position: 0% 58%
+    }
+}
+
+@-moz-keyframes background-animate {
+    0% {
+        background-position: 0% 58%
+    }
+
+    50% {
+        background-position: 100% 43%
+    }
+
+    100% {
+        background-position: 0% 58%
+    }
+}
+
+@keyframes background-animate {
+    0% {
+        background-position: 0% 58%
+    }
+
+    50% {
+        background-position: 100% 43%
+    }
+
+    100% {
+        background-position: 0% 58%
+    }
+}

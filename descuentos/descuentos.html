@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descuentos de producto</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+
+<body class="white">
+    <section class="container px-5">
+        <h1 class="text-center">Calcular descuentos</h1>
+        <div class="row-cols ">
+            <form class="form">
+                <div class="row">
+                    <div class="form-group col-sm-12 col-md-6">
+                        <label for="precio">Precio Original</label>
+                        <input class="form-control form-control-sm" type="number" name="precio" id="precioOriginal">
+                    </div>
+                    <div class="form-group col-sm-12 col-md-6">
+                        <label for="descuento">Descuento</label>
+                        <input class="form-control form-control-sm" type="number" max="100" min="1" name="descuento" id="descuento">
+                    </div>
+                </div>
+                <div class="form-group mb-1 mt-1">
+                    <label for="cupones">Codigo de descuentos</label>
+                    <select id="cupones" class="form-select form-select-sm " aria-label="Default select example">
+                        <option selected></option>
+                    </select>
+                </div>
+                <div class="form-group d-grid mt-1 mb-1 ">
+                    <button onclick="calcular()" type="button" id="buttonCalc" class="btn btn-danger ">Calcular</button>
+                </div>
+                <div class="form-group">
+                    <label for="precio">El precio con descuento</label>
+                    <input class="form-control form-control-sm " type="number" name="precio" id="precio" readonly>
+                </div>
+                <div id="messageAlert">
+                </div>
+            </form>
+        </div>
+        <div class="switch-theme">
+            <input class="switch" role="check" type="checkbox"  id="selectTheme">
+            <label class="label" for="selectTheme">
+                <i class="bi bi-moon-fill"></i>
+                <i class="bi bi-brightness-high"></i>
+                <i class="ball"></i>   
+        </div>
+    </section>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+<script src="./static/js/descuentos.js"></script>
+<script src="./static/js/cupones.js"></script>
+<script src="./static/js/alertMessage.js"></script>
+<script src="./static/js/theme.js"></script>
+
+</html>
