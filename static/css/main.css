@@ -1,20 +1,129 @@
-*{
+* {
     color: white;
 }
+
 body {
-    background: linear-gradient( rgba(2, 0, 36, 1) 0%, rgba(27, 44, 145, 1) 39%, rgba(0, 194, 255, 1) 100%);
+    background: linear-gradient(rgba(2, 0, 36, 1) 0%, rgba(27, 44, 145, 1) 39%, rgba(0, 194, 255, 1) 100%);
     background-repeat: no-repeat;
     background-size: 600% 600%;
     color: white;
 }
+
 nav a {
-    color: white!important;
+    color: white !important;
 }
+
 nav .dropdown-menu {
-    background: transparent!important;
+    background: transparent !important;
 }
 
 section.container {
     border-radius: 10px;
     border-style: inset;
 }
+
+.top-background {
+    background-image: url(../img/bg-desktop.jpg);
+    background-size: cover;
+    height: 300px;
+    background-position-y: center;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    
+}
+
+
+.top-menu-projects>li {
+    list-style: none;
+
+}
+
+.top-menu-projects>li>a {
+    padding-left: 10px;
+}
+
+.top-menu-projects>li>a:hover {
+    background-color: rgba(255, 255, 255, 0.251);
+    border-radius: 25px;
+
+}
+
+.btn-colapse::before{
+   transition: all;
+   animation: levitate 2s infinite;
+   cursor: pointer;
+}
+
+@keyframes levitate {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(0, -10px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  
+  .card{
+    background-color: rgba(7, 31, 128, 0.725);
+  }
+  .card > a{
+    text-decoration: none;
+
+  }
+
+  .calculus-img{
+    background-image: url(../../static/img/calculus.png);
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+    background-position: center;
+    margin: 10px;
+  }
+
+  .discounts-img{
+    background-image: url(../../static/img/descounts.png);
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+    background-position: center;
+    margin: 10px;
+
+  }
+  
+  .media-img{
+    background-image: url(../../static/img/Media.png);
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+    background-position: center;
+    margin: 10px;
+
+  }
+  .lazyloading-img{
+    background-image: url(../../static/img/lazyLoading.png);
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+    background-position: center;
+    margin: 10px;
+
+  }
+
+  .todokd-img{
+    background-image: url(../../static/img/todoKD.png);
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+    background-position: center;
+    margin: 10px;
+  }
+
+  .card > img{
+    width: 230px;
+    padding:15px;
+  }
+  
+  
